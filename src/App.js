@@ -15,9 +15,9 @@ class App extends Component {
     document.body.style.color = 'inherit'
     const { destination, source, draggableId } = result
 
-    // if there is no destination there is nothing we have to do
+    // if there is no destination there is nothing to do
     if (!destination) return
-    // if these 2 things are true the user dragged the item at the position of the start and we dont have to do anthing
+    // if these 2 things are true the user dragged the item at the position of the start and there is nothing to do
     if (destination.droppableId === source.droppableId && destination.index === source.index) return
 
     // reorder the taskIds array
@@ -46,7 +46,7 @@ class App extends Component {
       this.setState(newState)
     }
 
-    // Moving fron list to another
+    // Moving item from one list to another list
     const startTaskIds = Array.from(startColumn.taskIds)
     startTaskIds.splice(source.index, 1)
     const newStart = {
