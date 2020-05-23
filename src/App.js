@@ -2,10 +2,20 @@ import React, { Component } from 'react'
 import initialData from './initial-data'
 import { DragDropContext } from 'react-beautiful-dnd'
 import Column from './components/column'
-import Logo from './components/logo'
+import logo from './logo.png'
 import './App.css'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUserCircle,
+  faCalendarCheck,
+  faPercentage,
+  faLeaf,
+  faBook,
+  faColumns,
+  faCog
+} from '@fortawesome/free-solid-svg-icons'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import {
   Sidebar,
   Header,
@@ -104,15 +114,51 @@ class App extends Component {
     return (
       <GridContainer>
         <header className='header'>
-          <Logo />
-          <ul className='menu'>
-            <li className='flexItem'>Your Work</li>
-            <li className='flexItem'>Your Work</li>
-          </ul>
-          <FontAwesomeIcon icon={faUserCircle} size='1x' />
-        </header>
+          <span className='logo'>
+            <FontAwesomeIcon icon={faLeaf} size='2x' />
+          </span>
+          <span className='logoText'>Done</span>
 
-        <Sidebar>test schwall</Sidebar>
+          {/* <img class='logo' src={logo} width='70px' /> */}
+          <nav>
+            <ul class='menu'>
+              <li>
+                <a href='#'>Your Work</a>
+              </li>
+              <li>
+                <a href='#'>Projects</a>
+              </li>
+            </ul>
+          </nav>
+          <a href='#'>
+            <button className='createButton'>Create</button>
+          </a>
+          <div className='profileIcon'>
+            <FontAwesomeIcon icon={faUserCircle} size='1x' />
+          </div>
+        </header>
+        <nav className='sideBar'>
+          <ul className='sideMenu'>
+            <li>
+              <span className='projectTitleLogo'>
+                <FontAwesomeIcon icon={faBook} size='1x' />
+              </span>
+              Project Title
+            </li>
+            <li>
+              <span className='boardsLogo'>
+                <FontAwesomeIcon icon={faColumns} size='1x' />
+              </span>
+              Boards
+            </li>
+            <li>
+              <span className='projectSettingsLogo'>
+                <FontAwesomeIcon icon={faCog} size='1x' />
+              </span>
+              Project Settings
+            </li>
+          </ul>
+        </nav>
         <Main>
           <DragDropContext onDragEnd={this.handleOnDragEnd}>
             <Container>

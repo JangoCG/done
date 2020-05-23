@@ -6,28 +6,93 @@ img {
   padding: 5px;
 }
 
-.menu {
+.header {
+  grid-area: header;
   display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 6px 1%;
+  border-bottom: 2px solid #e5e5e5;
 }
 
-.flexItem {
-  flex-direction: row;
-  border: 1px solid red;
+.menu {
   list-style: none;
 }
 
-.header {
-  grid-area: header;
-  background-color: #ffffff;
-  height: 2em;
-  padding: 1rem 0;
-  grid-area: header;
+.menu li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.menu a {
+  color: rgb(52, 69, 99);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.createButton {
+  margin-left: 15px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(51, 99, 209, 1);
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+.createButton:hover {
+  background-color: rgb(51, 99, 209, 0.8);
+}
+
+.logo {
+  color: rgb(51, 99, 209, 1);
+  font-size: 18px;
+}
+
+.logoText {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 10px;
+  color: rgb(52, 69, 99, 1);
+}
+
+.profileIcon {
+  margin-left: auto;
+  font-size: 23px;
+}
+
+.sideBar {
+  grid-area: nav;
+  background-color: #f4f5f7;
+  color: lightslategray;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  border-bottom: 2px solid #e5e5e5;
-  margin-bottom: 0px;
-  font-size: 19px;
-  flex: 1;
+  flex-direction: column;
+  border-right: 1px solid #e5e5e5;
+}
+.sideMenu {
+  list-style: none;
+}
+
+.sideMenu li {
+  padding-top: 30px;
+}
+
+.projectTitleLogo {
+  font-size: 22px;
+  margin-right: 10px;
+  color: rgb(51, 99, 209, 1);
+}
+.boardsLogo {
+  font-size: 22px;
+  margin-right: 10px;
+  /* color: rgb(51, 99, 209, 1); */
+}
+.projectSettingsLogo {
+  font-size: 22px;
+  margin-right: 10px;
+  /* color: rgb(51, 99, 209, 1); */
 }

@@ -56,7 +56,7 @@ export const Footer = styled.footer``
 export const Container = styled.div`
   display: flex;
   /* justify-content: space-between; */
-  margin-right: 50px;
+  margin-right: 150px;
   margin-left: 50px;
 `
 
@@ -64,6 +64,7 @@ export const Container = styled.div`
 
 export const ColumnContainer = styled.div`
   margin: 8px;
+  /* margin-right: 50px; */
   border: 1px solid lightgrey;
   border-radius: 3px;
   width: 220px;
