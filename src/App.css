@@ -1,0 +1,33 @@
+body {
+  background-color: #ffffff;
+}
+
+img {
+  padding: 5px;
+}
+
+.menu {
+  display: flex;
+}
+
+.flexItem {
+  flex-direction: row;
+  border: 1px solid red;
+  list-style: none;
+}
+
+.header {
+  grid-area: header;
+  background-color: #ffffff;
+  height: 2em;
+  padding: 1rem 0;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 0px;
+  font-size: 19px;
+  flex: 1;
+}
